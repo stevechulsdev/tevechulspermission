@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    compileOnly 'androidx.annotation:annotation:1.0.1'
+
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+publish {
+    userOrg = 'kimjiminandco' // company user name
+    groupId = 'co.kimjiminand.android' // package name
+    artifactId = 'runtime-permission' // library name
+    publishVersion = '1.0.4'
+    desc = 'stevechulsdev runtimepermission library'
+}
+
+//publish {
+//    userOrg = 'kimjiminandco'
+//    groupId = 'stevechulsdev-runtimepermission'
+//    artifactId = 'stevechulsdev-runtimepermission'
+//    publishVersion = '1.0.2'
+//    desc = 'stevechulsdev runtimepermission library'
+//}

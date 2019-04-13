@@ -1,0 +1,4 @@
+#Thu Jan 17 19:08:24 KST 2019
+base.0=/Users/stevechulsdev/android_runtimepermission_library/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
